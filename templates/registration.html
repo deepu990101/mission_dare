@@ -1,0 +1,102 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Registration :-)</title>
+  </head>
+  <body>
+  <form action="/education/" method="post">
+      {% csrf_token %}
+        <table border="0" align="center" width=90%>
+             {% include 'index.html'%}
+        </table><br><br>
+
+        <table align="center" border="0" width="90%">
+            <tr>
+                <th style="color: #fe6500"><br>Employee ID * :</th>
+                <th><br><input placeholder="Enter Employee ID" type="text" maxlength="20" name="t1" required style="color: #1b35e4"></th>
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>First Name * :</th>
+                <th><br><input placeholder="Enter First name" type="text" maxlength="20" name="t2" required width="200" height="20" style="color: #1b35e4"></th>
+
+                <th style="color: #fe6500"><br>Middle Name * :</th>
+                <th><br><input placeholder="Enter Middle name" type="text" maxlength="20" name="t3" width="200" height="20" style="color: #1b35e4"></th>
+                <th style="color: #fe6500"><br>Last Name :</th>
+                <th><br><input placeholder="Last name" type="text" maxlength="20" name="t4" required width="200" height="20" style="color: #1b35e4"></th>
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>Father Name * :</th>
+                <th><br><input placeholder="Enter Fathers name" type="text" maxlength="20" name="t5" required style="color: #1b35e4"></th>
+                <th style="color: #fe6500"><br>Mother Name * :</th>
+                <th><br><input placeholder="Enter Mothers name" type="text" maxlength="20" name="t6" required style="color: #1b35e4"></th>
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>DOB (As per SSC) :</th>
+                <th><br><input placeholder="Enter DOB" type="date" name="t7" required style="color: #1b35e4"></th>
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>Temporary Address :</th>
+                <th><br><textarea placeholder="Enter Temporary Address"  name="t8" style="color: #1b35e4"></textarea></th>
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>Permanent Address * :</th>
+                <th><br><textarea placeholder="Enter Permanent Address"  name="t9" required style="color: #1b35e4"></textarea></th>
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>Gender * :</th>
+                <td style="color: #1b35e4"><input type="radio" name="t10" value="Male">   Male<br>
+                <td colspan="2" style="color: #1b35e4"><input type="radio" name="t10" value="Female">   Female<br></td>
+                <td style="color: #1b35e4"><input type="radio" name="t10" value="others">   Others</td>
+
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>Contact no * :</th>
+                <th><br><input placeholder="Contact no" type="tel" name="t11" required style="color: #1b35e4"></th>
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>Image * :</th>
+                <th><br><input placeholder="Contact image" type="file" name="t12" required style="color: #1b35e4"></th>
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>AADHAR * :</th>
+                <th><br><input placeholder="Enter AADHAR" type="number"  name="t13" minlength="100000000000" maxlength="999999999999" required style="color: #1b35e4"></th>
+            </tr>
+            <tr>
+                <th style="color: #fe6500"><br>PAN no :</th>
+                <th><br><input placeholder="Enter PAN no" type="text"  name="t14" maxlength="15" style="color: #1b35e4"></th>
+            </tr>
+
+            <tr style="text-align: center">
+                <td colspan="6"><br><button type="submit" class="btn btn-primary">Next</button></td>
+            </tr>
+
+        </table>
+  <br><br><br><br>
+      </form>
+    <br><br>
+      {% if data %}
+      <table align="center">
+          <tr style="text-align: center ; font-family: 'Adobe Devanagari',serif;color: green">
+              <th>
+                {{ data }}
+              </th>
+          </tr>
+      </table>
+      {% endif %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
