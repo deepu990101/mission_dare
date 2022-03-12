@@ -2,7 +2,7 @@ asgiref==3.2.10
 Django==2.1
 django-jenkins==0.110.0
 pep8==1.7.1
-Pillow==7.1.2
+Pillow==9.0.1
 pyflakes==2.2.0
 pytz==2020.1
 sqlparse==0.3.1
